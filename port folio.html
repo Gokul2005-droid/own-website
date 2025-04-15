@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gokul Krishna | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .zoom-hover:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">Gokul Krishna</h1>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-indigo-500">About</a>
+        <a href="#skills" class="hover:text-indigo-500">Skills</a>
+        <a href="#projects" class="hover:text-indigo-500">Portfolio</a>
+        <a href="#contact" class="hover:text-indigo-500">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-28 pb-16 bg-white text-center fade-in">
+    <img src="https://media-hosting.imagekit.io/89e7d10ff4c04160/WhatsApp_Image_2025-04-14_at_19.55.51_17eb1329-removebg-preview.png?Expires=1839249670&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BUidPYv0um5HhKXsqCx9DspNctMSZBiWtN3V-E2LuEWgp5PQoQYYQ8f9yfut7Go~ZzTSDeOwFuR8Bm67ApZk1BBUsJYZx4Cxcg5f5sjbRYqpQCn1gvPmY7CYwqotfOaKi0OKgfQmXp9iUFUdGUIOsDDANjjFpzroP~qIVdtbCbopkFSuY0UT0tMasWEaFcY52ls6vQpealjPNU35tmWKq89uDY3ddsfHdQnZTwf01n-lIWb9M1GctHUPaaG9MeZefjs7QtpXvxp~wEgjoWe8xFurcsHMg--W~ddRoE9FzUPmY9ztzcq6dmKM8-Dp1rUjP018YFYUHDf99oXq8ehUlw__"
+         alt="Gokul Krishna"
+         class="mx-auto w-72 h-72 rounded-full object-contain bg-gray-100 shadow-xl transition-transform duration-700 zoom-hover"/>
+    <h2 class="text-4xl font-bold mt-6">Hi, I'm <span class="text-indigo-600">Gokul Krishna</span></h2>
+    <p class="mt-3 text-xl text-gray-600">Creative Designer | Photo Editor | Web Creator</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50 fade-in">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold mb-6 text-indigo-600">About Me</h3>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        I'm a passionate and detail-oriented creative professional with a knack for transforming ideas into stunning visuals and effective digital experiences. Whether it’s designing websites, editing photos, making presentations or video transcriptions — I bring both precision and flair to every project.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-white fade-in">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center text-indigo-600 mb-10">My Skills</h3>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+          <h4 class="font-bold text-xl mb-2">Photo Editing</h4>
+          <p>High-quality image enhancements and creative edits that capture attention.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+          <h4 class="font-bold text-xl mb-2">Designing</h4>
+          <p>Eye-catching graphics and branding elements tailored to your vision.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+          <h4 class="font-bold text-xl mb-2">Presentation Making</h4>
+          <p>Professional PowerPoint and visual storytelling that communicates clearly.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+          <h4 class="font-bold text-xl mb-2">Video Transcription</h4>
+          <p>Accurate and well-formatted transcriptions for videos and presentations.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+          <h4 class="font-bold text-xl mb-2">Website Creation</h4>
+          <p>Beautiful, responsive websites tailored to your needs and audience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="projects" class="py-16 bg-gray-50 fade-in">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-indigo-600 mb-8">My Work</h3>
+      <p class="text-gray-600">Showcasing some of the creative projects I’ve worked on — portfolio coming soon!</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white fade-in">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-indigo-600 mb-6">Contact Me</h3>
+      <p class="text-gray-600 mb-4">Let’s collaborate or chat about your project!</p>
+      <a href="mailto:rgokulkrishna37@gmail.com" class="inline-block mt-4 bg-indigo-600 text-white px-6 py-3 rounded-full shadow hover:bg-indigo-700 transition">
+        📧 Email Me
+      </a>
+      <br /><br />
+      <a href="https://www.fiverr.com/s/384Gpwx" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 transition">
+        💼 If you need service, Hire Me on Fiverr
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2025 Gokul Krishna. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
