@@ -20,6 +20,35 @@
       transform: scale(1.05);
       transition: transform 0.5s ease-in-out;
     }
+
+    /* Conveyor belt animation */
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .conveyor-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .conveyor {
+      display: flex;
+      width: 200%; /* double the width for seamless looping */
+      animation: scrollLeft 20s linear infinite;
+    }
+
+    .conveyor .card {
+      width: 300px;
+      margin: 0 1rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .conveyor .card {
+        width: 250px;
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -39,7 +68,7 @@
 
   <!-- Hero Section -->
   <section class="pt-28 pb-16 bg-white text-center fade-in">
-    <img src="https://media-hosting.imagekit.io/89e7d10ff4c04160/WhatsApp_Image_2025-04-14_at_19.55.51_17eb1329-removebg-preview.png?Expires=1839249670&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BUidPYv0um5HhKXsqCx9DspNctMSZBiWtN3V-E2LuEWgp5PQoQYYQ8f9yfut7Go~ZzTSDeOwFuR8Bm67ApZk1BBUsJYZx4Cxcg5f5sjbRYqpQCn1gvPmY7CYwqotfOaKi0OKgfQmXp9iUFUdGUIOsDDANjjFpzroP~qIVdtbCbopkFSuY0UT0tMasWEaFcY52ls6vQpealjPNU35tmWKq89uDY3ddsfHdQnZTwf01n-lIWb9M1GctHUPaaG9MeZefjs7QtpXvxp~wEgjoWe8xFurcsHMg--W~ddRoE9FzUPmY9ztzcq6dmKM8-Dp1rUjP018YFYUHDf99oXq8ehUlw__"
+    <img src="https://media-hosting.imagekit.io/89e7d10ff4c04160/WhatsApp_Image_2025-04-14_at_19.55.51_17eb1329-removebg-preview.png"
          alt="Gokul Krishna"
          class="mx-auto w-72 h-72 rounded-full object-contain bg-gray-100 shadow-xl transition-transform duration-700 zoom-hover"/>
     <h2 class="text-4xl font-bold mt-6">Hi, I'm <span class="text-indigo-600">Gokul Krishna</span></h2>
@@ -56,30 +85,55 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills Section (Conveyor Belt Style) -->
   <section id="skills" class="py-16 bg-white fade-in">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center text-indigo-600 mb-10">My Skills</h3>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
-          <h4 class="font-bold text-xl mb-2">Photo Editing</h4>
-          <p>High-quality image enhancements and creative edits that capture attention.</p>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
-          <h4 class="font-bold text-xl mb-2">Designing</h4>
-          <p>Eye-catching graphics and branding elements tailored to your vision.</p>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
-          <h4 class="font-bold text-xl mb-2">Presentation Making</h4>
-          <p>Professional PowerPoint and visual storytelling that communicates clearly.</p>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
-          <h4 class="font-bold text-xl mb-2">Video Transcription</h4>
-          <p>Accurate and well-formatted transcriptions for videos and presentations.</p>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
-          <h4 class="font-bold text-xl mb-2">Website Creation</h4>
-          <p>Beautiful, responsive websites tailored to your needs and audience.</p>
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-indigo-600 mb-10">My Skills</h3>
+      <div class="conveyor-wrapper">
+        <div class="conveyor">
+          <!-- Duplicated cards for seamless loop -->
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Photo Editing</h4>
+            <p>High-quality image enhancements and creative edits that capture attention.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Designing</h4>
+            <p>Eye-catching graphics and branding elements tailored to your vision.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Presentation Making</h4>
+            <p>Professional PowerPoint and visual storytelling that communicates clearly.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Video Transcription</h4>
+            <p>Accurate and well-formatted transcriptions for videos and presentations.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Website Creation</h4>
+            <p>Beautiful, responsive websites tailored to your needs and audience.</p>
+          </div>
+
+          <!-- Duplicate the same for looping -->
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Photo Editing</h4>
+            <p>High-quality image enhancements and creative edits that capture attention.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Designing</h4>
+            <p>Eye-catching graphics and branding elements tailored to your vision.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Presentation Making</h4>
+            <p>Professional PowerPoint and visual storytelling that communicates clearly.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Video Transcription</h4>
+            <p>Accurate and well-formatted transcriptions for videos and presentations.</p>
+          </div>
+          <div class="card bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-xl zoom-hover">
+            <h4 class="font-bold text-xl mb-2">Website Creation</h4>
+            <p>Beautiful, responsive websites tailored to your needs and audience.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -112,6 +166,5 @@
   <footer class="bg-gray-800 text-white text-center py-4">
     <p>&copy; 2025 Gokul Krishna. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
